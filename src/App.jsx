@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
-// import Benefits from './components/Benefits'
+import Benefits from './components/Benefits'
 // import Requirements from './components/Requirements'
 // import NextSteps from './components/NextSteps'
 // import About from './components/About'
@@ -16,13 +16,7 @@ function App() {
       <main>
         <Hero />
 
-        {/* Benefits Section */}
-        <section id="benefits" className="min-h-screen bg-bg-light flex items-center justify-center">
-          <div className="container mx-auto px-4 py-16 text-center">
-            <h2 className="text-3xl font-bold text-primary-charcoal mb-4">Benefits Section</h2>
-            <p className="text-text-gray">Benefits component will go here</p>
-          </div>
-        </section>
+        <Benefits />
 
         {/* Requirements Section */}
         <section id="requirements" className="min-h-screen bg-white flex items-center justify-center">
