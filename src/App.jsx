@@ -1,5 +1,5 @@
 import Header from './components/Header'
-// import Hero from './components/Hero'
+import Hero from './components/Hero'
 // import Benefits from './components/Benefits'
 // import Requirements from './components/Requirements'
 // import NextSteps from './components/NextSteps'
@@ -14,16 +14,7 @@ function App() {
       <Header />
 
       <main>
-        {/* Home/Hero Section */}
-        <section id="home" className="min-h-screen bg-white flex items-center justify-center">
-          <div className="container mx-auto px-4 py-16 text-center">
-            <h1 className="text-4xl font-bold text-primary-charcoal mb-4">Home Section</h1>
-            <p className="text-text-gray">Hero component will go here</p>
-            <div className="mt-8 p-4 bg-primary-scarlet text-white rounded-lg inline-block">
-              Tailwind custom color test: primary-scarlet
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         {/* Benefits Section */}
         <section id="benefits" className="min-h-screen bg-bg-light flex items-center justify-center">
