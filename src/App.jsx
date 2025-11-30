@@ -1,5 +1,4 @@
-// Component imports (to be added in future prompts)
-// import Header from './components/Header'
+import Header from './components/Header'
 // import Hero from './components/Hero'
 // import Benefits from './components/Benefits'
 // import Requirements from './components/Requirements'
@@ -7,17 +6,12 @@
 // import About from './components/About'
 // import FAQ from './components/FAQ'
 // import Register from './components/Register'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <div className="min-h-screen bg-white text-text-dark">
-      {/* Header placeholder */}
-      <header className="bg-primary-charcoal text-white p-4">
-        <div className="container mx-auto">
-          <p className="text-lg font-semibold">Header Component Placeholder</p>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* Home/Hero Section */}
@@ -80,12 +74,7 @@ function App() {
         </section>
       </main>
 
-      {/* Footer placeholder */}
-      <footer className="bg-primary-charcoal text-white p-8">
-        <div className="container mx-auto text-center">
-          <p className="text-accent-gray">Footer Component Placeholder</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
