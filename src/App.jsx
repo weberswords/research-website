@@ -1,35 +1,20 @@
-// Component imports (to be added in future prompts)
-// import Header from './components/Header'
-// import Hero from './components/Hero'
+import Header from './components/Header'
+import Hero from './components/Hero'
 // import Benefits from './components/Benefits'
 // import Requirements from './components/Requirements'
 // import NextSteps from './components/NextSteps'
 // import About from './components/About'
 // import FAQ from './components/FAQ'
 // import Register from './components/Register'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <div className="min-h-screen bg-white text-text-dark">
-      {/* Header placeholder */}
-      <header className="bg-primary-charcoal text-white p-4">
-        <div className="container mx-auto">
-          <p className="text-lg font-semibold">Header Component Placeholder</p>
-        </div>
-      </header>
+      <Header />
 
       <main>
-        {/* Home/Hero Section */}
-        <section id="home" className="min-h-screen bg-white flex items-center justify-center">
-          <div className="container mx-auto px-4 py-16 text-center">
-            <h1 className="text-4xl font-bold text-primary-charcoal mb-4">Home Section</h1>
-            <p className="text-text-gray">Hero component will go here</p>
-            <div className="mt-8 p-4 bg-primary-scarlet text-white rounded-lg inline-block">
-              Tailwind custom color test: primary-scarlet
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         {/* Benefits Section */}
         <section id="benefits" className="min-h-screen bg-bg-light flex items-center justify-center">
@@ -80,12 +65,7 @@ function App() {
         </section>
       </main>
 
-      {/* Footer placeholder */}
-      <footer className="bg-primary-charcoal text-white p-8">
-        <div className="container mx-auto text-center">
-          <p className="text-accent-gray">Footer Component Placeholder</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
