@@ -9,7 +9,7 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-3">Contact</h3>
             <p className="text-gray-300 text-sm mb-2">
-              Department of Computer Science
+              Department of Educational Psychology, Leadership, and Higher Education
             </p>
             <p className="text-gray-300 text-sm mb-2">
               University of Nevada, Las Vegas
@@ -32,14 +32,6 @@ function Footer() {
                   className="text-gray-300 text-sm hover:text-primary-scarlet transition-colors"
                 >
                   Consent Form
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#protocol"
-                  className="text-gray-300 text-sm hover:text-primary-scarlet transition-colors"
-                >
-                  Study Protocol
                 </a>
               </li>
               <li>

@@ -10,7 +10,7 @@ const timelineSteps = [
     items: [
       'Individual online survey',
       'Assess teamwork competencies',
-      'Complete 3+ days before session',
+      'Complete to unlock session scheduling',
     ],
   },
   {
