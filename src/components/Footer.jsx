@@ -8,12 +8,25 @@ function Footer() {
           {/* Left column - Contact info */}
           <div>
             <h3 className="font-semibold text-lg mb-3">Contact</h3>
-            <p className="text-gray-300 text-sm mb-2">
+            <a
+              href="https://www.unlv.edu/ephe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 text-sm hover:text-primary-scarlet transition-colors block mb-2"
+            >
               Department of Educational Psychology, Leadership, and Higher Education
-            </p>
-            <p className="text-gray-300 text-sm mb-2">
+            </a>
+            <p className="text-gray-300 text-sm mb-4">
               University of Nevada, Las Vegas
             </p>
+
+            <p className="text-gray-400 text-xs mb-1">Principal Investigator</p>
+            <p className="text-gray-300 text-sm mb-3">
+              Vanessa Vongkulluksn, Ph.D.
+            </p>
+
+            <p className="text-gray-400 text-xs mb-1">Student Researcher</p>
+            <p className="text-gray-300 text-sm mb-1">Stephanie Weber</p>
             <a
               href="mailto:webers4@unlv.nevada.edu"
               className="text-gray-300 text-sm hover:text-primary-scarlet transition-colors"
