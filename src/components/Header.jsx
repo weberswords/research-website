@@ -1,13 +1,17 @@
+import graduateCollegeLogo from '../assets/GraduateCollege_V.png'
+
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border-gray shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          {/* Logo placeholder */}
+          {/* Graduate College Logo */}
           <div className="flex-shrink-0">
-            <div className="w-32 h-12 bg-gray-200 rounded flex items-center justify-center text-text-gray text-sm">
-              UNLV Logo
-            </div>
+            <img
+              src={graduateCollegeLogo}
+              alt="UNLV Graduate College"
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Study info */}
