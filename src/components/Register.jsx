@@ -12,8 +12,7 @@ function Register() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  // Placeholder URL - replace with actual Qualtrics survey URL
-  const qualtricsUrl = 'about:blank'
+  const qualtricsUrl = 'https://unlv.co1.qualtrics.com/jfe/form/SV_9Fey8MlrR5utDAG'
 
   return (
     <section id="register" className="bg-bg-light py-16 md:py-24">
