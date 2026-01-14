@@ -41,9 +41,16 @@ function Register() {
 
         {/* Form info */}
         <div className="bg-white rounded-xl p-4 mb-6 border border-border-gray">
-          <p className="text-sm text-text-gray text-center">
+          <p className="text-sm text-text-gray text-center mb-3">
             This form will collect: team contact name &amp; email, team name, number of members (4-8),
             all team member emails, how long you&apos;ve worked together, and scheduling preferences.
+          </p>
+          <p className="text-sm text-text-gray text-center">
+            For teams that do not meet eligibility criteria, all enrollment form information will be
+            destroyed within 30 days of the student researcher notifying the team of ineligibility.
+            For teams that proceed to study participation, contact information will be retained through
+            the completion of their participation and until the team receives their profile report.
+            After profile reports are delivered, all contact information will be destroyed.
           </p>
         </div>
 
