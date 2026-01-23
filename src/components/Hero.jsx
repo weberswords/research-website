@@ -58,29 +58,29 @@ function Hero() {
 
                   {/* Axis lines */}
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                    {/* Vertical axis */}
-                    <line x1="50" y1="5" x2="50" y2="95" stroke="#e2e8f0" strokeWidth="1" />
-                    {/* Horizontal axis */}
-                    <line x1="5" y1="50" x2="95" y2="50" stroke="#e2e8f0" strokeWidth="1" />
-                    {/* Diagonal axes */}
-                    <line x1="15" y1="15" x2="85" y2="85" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="85" y1="15" x2="15" y2="85" stroke="#e2e8f0" strokeWidth="1" />
+                    {/* 6 axes at 60° intervals from center */}
+                    <line x1="50" y1="50" x2="50" y2="5" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="89" y2="27" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="89" y2="73" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="50" y2="95" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="11" y2="73" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="11" y2="27" stroke="#e2e8f0" strokeWidth="1" />
 
-                    {/* Sample data polygon */}
+                    {/* Sample data polygon - points on the 6 axes */}
                     <polygon
-                      points="50,15 75,30 80,60 60,80 35,75 20,45"
+                      points="50,15 73,37 77,66 50,80 27,63 31,39"
                       fill="rgba(204, 0, 0, 0.2)"
                       stroke="#cc0000"
                       strokeWidth="2"
                     />
 
-                    {/* Data points */}
+                    {/* Data points - aligned with axes */}
                     <circle cx="50" cy="15" r="4" fill="#cc0000" />
-                    <circle cx="75" cy="30" r="4" fill="#cc0000" />
-                    <circle cx="80" cy="60" r="4" fill="#cc0000" />
-                    <circle cx="60" cy="80" r="4" fill="#cc0000" />
-                    <circle cx="35" cy="75" r="4" fill="#cc0000" />
-                    <circle cx="20" cy="45" r="4" fill="#cc0000" />
+                    <circle cx="73" cy="37" r="4" fill="#cc0000" />
+                    <circle cx="77" cy="66" r="4" fill="#cc0000" />
+                    <circle cx="50" cy="80" r="4" fill="#cc0000" />
+                    <circle cx="27" cy="63" r="4" fill="#cc0000" />
+                    <circle cx="31" cy="39" r="4" fill="#cc0000" />
                   </svg>
 
                   {/* Labels */}

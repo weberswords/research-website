@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, ArrowUp, Loader2 } from 'lucide-react'
+import { Mail, ArrowUp, Loader2, ExternalLink } from 'lucide-react'
 
 function Register() {
   const [isLoading, setIsLoading] = useState(true)
@@ -52,6 +52,19 @@ function Register() {
             the completion of their participation and until the team receives their profile report.
             After profile reports are delivered, all contact information will be destroyed.
           </p>
+        </div>
+
+        {/* Open in new tab option */}
+        <div className="text-center mb-4">
+          <a
+            href={qualtricsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary-scarlet hover:text-red-700 font-medium text-sm transition-colors"
+          >
+            <ExternalLink className="w-4 h-4" />
+            Open survey in a new tab
+          </a>
         </div>
 
         {/* Qualtrics iframe container */}
