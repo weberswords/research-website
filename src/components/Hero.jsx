@@ -58,43 +58,44 @@ function Hero() {
 
                   {/* Axis lines */}
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                    {/* Vertical axis */}
-                    <line x1="50" y1="5" x2="50" y2="95" stroke="#e2e8f0" strokeWidth="1" />
-                    {/* Horizontal axis */}
-                    <line x1="5" y1="50" x2="95" y2="50" stroke="#e2e8f0" strokeWidth="1" />
-                    {/* Diagonal axes */}
-                    <line x1="15" y1="15" x2="85" y2="85" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="85" y1="15" x2="15" y2="85" stroke="#e2e8f0" strokeWidth="1" />
+                    {/* 5 axes at 72° intervals from center */}
+                    <line x1="50" y1="50" x2="50" y2="5" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="93" y2="35" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="77" y2="90" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="23" y2="90" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="7" y2="35" stroke="#e2e8f0" strokeWidth="1" />
 
-                    {/* Sample data polygon */}
+                    {/* Sample data polygon - points on the 5 axes */}
                     <polygon
-                      points="50,15 75,30 80,60 60,80 35,75 20,45"
+                      points="50,12 82,38 70,82 30,75 20,40"
                       fill="rgba(204, 0, 0, 0.2)"
                       stroke="#cc0000"
                       strokeWidth="2"
                     />
 
-                    {/* Data points */}
-                    <circle cx="50" cy="15" r="4" fill="#cc0000" />
-                    <circle cx="75" cy="30" r="4" fill="#cc0000" />
-                    <circle cx="80" cy="60" r="4" fill="#cc0000" />
-                    <circle cx="60" cy="80" r="4" fill="#cc0000" />
-                    <circle cx="35" cy="75" r="4" fill="#cc0000" />
-                    <circle cx="20" cy="45" r="4" fill="#cc0000" />
+                    {/* Data points - aligned with axes */}
+                    <circle cx="50" cy="12" r="4" fill="#cc0000" />
+                    <circle cx="82" cy="38" r="4" fill="#cc0000" />
+                    <circle cx="70" cy="82" r="4" fill="#cc0000" />
+                    <circle cx="30" cy="75" r="4" fill="#cc0000" />
+                    <circle cx="20" cy="40" r="4" fill="#cc0000" />
                   </svg>
 
                   {/* Labels */}
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-xs font-medium text-text-gray">
-                    Async
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-xs font-medium text-text-gray whitespace-nowrap">
+                    Communication
                   </div>
-                  <div className="absolute top-1/2 -right-4 -translate-y-1/2 text-xs font-medium text-text-gray">
-                    Code
+                  <div className="absolute top-[22%] -right-8 text-xs font-medium text-text-gray whitespace-nowrap">
+                    Collaboration
                   </div>
-                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-xs font-medium text-text-gray">
-                    Sync
+                  <div className="absolute bottom-[5%] right-[10%] text-xs font-medium text-text-gray whitespace-nowrap">
+                    Problem Solving
                   </div>
-                  <div className="absolute top-1/2 -left-4 -translate-y-1/2 text-xs font-medium text-text-gray">
-                    Chat
+                  <div className="absolute bottom-[5%] left-[10%] text-xs font-medium text-text-gray whitespace-nowrap">
+                    Adaptability
+                  </div>
+                  <div className="absolute top-[22%] -left-8 text-xs font-medium text-text-gray whitespace-nowrap">
+                    Leadership
                   </div>
                 </div>
               </div>

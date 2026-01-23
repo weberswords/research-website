@@ -110,26 +110,27 @@ function Benefits() {
                     <circle cx="50" cy="50" r="30" fill="none" stroke="#e2e8f0" strokeWidth="1" />
                     <circle cx="50" cy="50" r="20" fill="none" stroke="#e2e8f0" strokeWidth="1" />
 
-                    {/* Axes */}
-                    <line x1="50" y1="10" x2="50" y2="90" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="10" y1="50" x2="90" y2="50" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="22" y1="22" x2="78" y2="78" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="78" y1="22" x2="22" y2="78" stroke="#e2e8f0" strokeWidth="1" />
+                    {/* 5 axes at 72° intervals from center */}
+                    <line x1="50" y1="50" x2="50" y2="10" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="88" y2="38" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="74" y2="82" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="26" y2="82" stroke="#e2e8f0" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="12" y2="38" stroke="#e2e8f0" strokeWidth="1" />
 
-                    {/* Data polygon */}
+                    {/* Data polygon - points on the 5 axes */}
                     <polygon
-                      points="50,16 76,35 70,72 30,72 24,35"
+                      points="50,16 80,40 72,80 34,73 25,42"
                       fill="rgba(204, 0, 0, 0.15)"
                       stroke="#cc0000"
                       strokeWidth="2"
                     />
 
-                    {/* Data points */}
+                    {/* Data points - aligned with axes */}
                     <circle cx="50" cy="16" r="3" fill="#cc0000" />
-                    <circle cx="76" cy="35" r="3" fill="#cc0000" />
-                    <circle cx="70" cy="72" r="3" fill="#cc0000" />
-                    <circle cx="30" cy="72" r="3" fill="#cc0000" />
-                    <circle cx="24" cy="35" r="3" fill="#cc0000" />
+                    <circle cx="80" cy="40" r="3" fill="#cc0000" />
+                    <circle cx="72" cy="80" r="3" fill="#cc0000" />
+                    <circle cx="34" cy="73" r="3" fill="#cc0000" />
+                    <circle cx="25" cy="42" r="3" fill="#cc0000" />
                   </svg>
                 </div>
               </div>
