@@ -1,4 +1,4 @@
-import { Award, Users, PieChart } from 'lucide-react'
+import { Award, Users, PieChart, FileBarChart, Download } from 'lucide-react'
 
 const benefits = [
   {
@@ -69,72 +69,22 @@ function Benefits() {
             </p>
           </div>
 
-          {/* Report mockup */}
-          <div className="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-6">
-              {/* Left side - scores */}
-              <div className="flex-1">
-                <h4 className="font-semibold text-primary-charcoal mb-4 text-sm uppercase tracking-wide">
-                  Competency Scores
-                </h4>
-                <div className="space-y-3">
-                  {[
-                    { name: 'Communication', score: 85 },
-                    { name: 'Collaboration', score: 78 },
-                    { name: 'Problem Solving', score: 92 },
-                    { name: 'Adaptability', score: 70 },
-                    { name: 'Leadership', score: 65 },
-                  ].map((item) => (
-                    <div key={item.name}>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span className="text-text-gray">{item.name}</span>
-                        <span className="font-medium text-primary-charcoal">{item.score}%</span>
-                      </div>
-                      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-primary-scarlet rounded-full"
-                          style={{ width: `${item.score}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Right side - mini radar chart */}
-              <div className="flex-1 flex items-center justify-center">
-                <div className="w-48 h-48 relative">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    {/* Background circles */}
-                    <circle cx="50" cy="50" r="40" fill="none" stroke="#e2e8f0" strokeWidth="1" />
-                    <circle cx="50" cy="50" r="30" fill="none" stroke="#e2e8f0" strokeWidth="1" />
-                    <circle cx="50" cy="50" r="20" fill="none" stroke="#e2e8f0" strokeWidth="1" />
-
-                    {/* 5 axes at 72° intervals from center */}
-                    <line x1="50" y1="50" x2="50" y2="10" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="50" y1="50" x2="88" y2="38" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="50" y1="50" x2="74" y2="82" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="50" y1="50" x2="26" y2="82" stroke="#e2e8f0" strokeWidth="1" />
-                    <line x1="50" y1="50" x2="12" y2="38" stroke="#e2e8f0" strokeWidth="1" />
-
-                    {/* Data polygon - points on the 5 axes */}
-                    <polygon
-                      points="50,16 80,40 72,80 34,73 25,42"
-                      fill="rgba(204, 0, 0, 0.15)"
-                      stroke="#cc0000"
-                      strokeWidth="2"
-                    />
-
-                    {/* Data points - aligned with axes */}
-                    <circle cx="50" cy="16" r="3" fill="#cc0000" />
-                    <circle cx="80" cy="40" r="3" fill="#cc0000" />
-                    <circle cx="72" cy="80" r="3" fill="#cc0000" />
-                    <circle cx="34" cy="73" r="3" fill="#cc0000" />
-                    <circle cx="25" cy="42" r="3" fill="#cc0000" />
-                  </svg>
-                </div>
-              </div>
+          {/* Download card */}
+          <div className="bg-white rounded-xl shadow-lg p-8 max-w-lg mx-auto text-center">
+            <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <FileBarChart className="w-8 h-8 text-primary-scarlet" />
             </div>
+            <p className="text-text-gray text-sm mb-6">
+              Download a complete example profile generated with sample data to see the radar chart, competency scores, and team analysis you&apos;ll receive.
+            </p>
+            <a
+              href="/example-profile.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-scarlet text-white font-semibold rounded-lg hover:bg-red-700 transition-colors shadow-md hover:shadow-lg"
+            >
+              <Download className="w-5 h-5" />
+              Download Example Report
+            </a>
           </div>
 
           <p className="text-center text-xs text-accent-gray mt-4">
