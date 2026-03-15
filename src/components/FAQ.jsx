@@ -20,7 +20,11 @@ const faqs = [
   },
   {
     question: "What if someone on our team can't make it?",
-    answer: "All team members must participate. We can reschedule if needed to ensure full team attendance.",
+    answer: "All team members must participate. You can reschedule by booking a new time on Google Calendar.",
+  },
+  {
+    question: 'Do I need permission from my company?',
+    answer: "If you're participating on company time with company resources, we need written permission on company letterhead before your session. Email it to webers4@unlv.nevada.edu ahead of your scheduled time.",
   },
   {
     question: 'Is this really free?',
@@ -144,10 +148,10 @@ function FAQ() {
         <div className="text-center mt-10">
           <p className="text-text-gray mb-4">Ready to participate?</p>
           <a
-            href="#register"
+            href="#schedule"
             className="inline-block px-8 py-4 bg-primary-scarlet text-white font-semibold rounded-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"
           >
-            Register Your Team
+            Schedule Your Session
           </a>
         </div>
       </div>

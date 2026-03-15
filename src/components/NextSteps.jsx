@@ -1,52 +1,31 @@
-import { UserPlus, ClipboardCheck, CalendarClock, Mail, Users, FileBarChart } from 'lucide-react'
+import { CalendarClock, ClipboardCheck, Users, FileBarChart } from 'lucide-react'
 
 const steps = [
   {
     number: 1,
-    title: 'You Register',
-    icon: UserPlus,
+    title: 'Schedule Your Session',
+    icon: CalendarClock,
     items: [
-      'Submit team information',
-      'Receive confirmation email',
+      'Pick a time that works for your team on Google Calendar',
+      'If participating on company time with company resources, provide permission on company letterhead ahead of time',
     ],
   },
   {
     number: 2,
-    title: 'Pre-Session Surveys',
+    title: 'Pre-Session Prep',
     icon: ClipboardCheck,
     items: [
-      'Each team member receives survey link',
-      'Complete 15-minute assessment',
-      'All team members must complete before scheduling',
+      'Consent form and pre-session survey sent to each team member',
+      'Complete the 15-minute survey before your scheduled session',
     ],
   },
   {
     number: 3,
-    title: 'Schedule Your Session',
-    icon: CalendarClock,
-    items: [
-      'Receive scheduling link via email after all surveys are complete',
-      'Choose 60-minute time slot',
-      'Session materials sent 30 minutes before your chosen time',
-    ],
-  },
-  {
-    number: 4,
-    title: 'Session Materials',
-    icon: Mail,
-    items: [
-      '30 minutes before your scheduled session',
-      'Email with Zoom meeting link',
-      'Access to team\'s Miro board',
-      'Board includes post-survey link',
-    ],
-  },
-  {
-    number: 5,
     title: 'Collaborative Session',
     icon: Users,
     duration: '60 minutes',
     items: [
+      'Researcher joins to get your team started',
       'Work together on design task using sticky notes and shapes',
       'No coding required',
       'Session recorded for research',
@@ -54,7 +33,7 @@ const steps = [
     ],
   },
   {
-    number: 6,
+    number: 4,
     title: 'Receive Results',
     icon: FileBarChart,
     items: [
@@ -142,10 +121,10 @@ function NextSteps() {
         {/* CTA */}
         <div className="text-center mt-12">
           <a
-            href="#register"
+            href="#schedule"
             className="inline-block px-8 py-4 bg-primary-scarlet text-white font-semibold rounded-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"
           >
-            Start the Process - Register Now
+            Schedule Your Session
           </a>
         </div>
       </div>

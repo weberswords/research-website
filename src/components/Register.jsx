@@ -1,34 +1,79 @@
-import { useState } from 'react'
-import { Mail, ArrowUp, Loader2, ExternalLink } from 'lucide-react'
+import { Mail, ArrowUp, Calendar, FileText } from 'lucide-react'
 
 function Register() {
-  const [isLoading, setIsLoading] = useState(true)
-
-  const handleIframeLoad = () => {
-    setIsLoading(false)
-  }
+  const calendarUrl = 'https://calendar.app.google/Y5WFP8HF2rfN9Mfu7'
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const qualtricsUrl = 'https://unlv.co1.qualtrics.com/jfe/form/SV_9Fey8MlrR5utDAG'
-
   return (
-    <section id="register" className="bg-bg-light py-16 md:py-24">
+    <section id="schedule" className="bg-bg-light py-16 md:py-24">
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Section header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-charcoal mb-4">
-            Register Your Team
+            Schedule Your Session
           </h2>
           <p className="text-text-gray text-lg mb-6">
-            Ready to participate? Complete this form to get started.
+            Pick a 60-minute window that works for your team and we&apos;ll get you started.
           </p>
+        </div>
 
-          {/* Email note */}
+        {/* Calendar signup card */}
+        <div className="bg-white rounded-2xl shadow-lg border border-border-gray p-8 md:p-10 max-w-2xl mx-auto">
+          <div className="text-center mb-8">
+            <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Calendar className="w-8 h-8 text-primary-scarlet" />
+            </div>
+            <h3 className="text-xl font-semibold text-primary-charcoal mb-3">
+              Book on Google Calendar
+            </h3>
+            <p className="text-text-gray">
+              Choose a time that works for your team. The researcher will join your session to get everyone started.
+              Consent forms and pre-session surveys will be sent out ahead of time.
+            </p>
+          </div>
+
+          <div className="text-center mb-8">
+            <a
+              href={calendarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-primary-scarlet text-white font-semibold rounded-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl text-lg"
+            >
+              <Calendar className="w-5 h-5" />
+              Schedule on Google Calendar
+            </a>
+          </div>
+
+          {/* Company permission note */}
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+            <div className="flex items-start gap-3">
+              <FileText className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="font-semibold text-amber-800 mb-1">
+                  Participating on company time?
+                </h4>
+                <p className="text-amber-700 text-sm">
+                  If you&apos;re participating on company time with company resources, we need permission
+                  on company letterhead ahead of your scheduled session. Please email it to{' '}
+                  <a
+                    href="mailto:webers4@unlv.nevada.edu"
+                    className="underline font-medium hover:text-amber-900"
+                  >
+                    webers4@unlv.nevada.edu
+                  </a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Email contact */}
+        <div className="text-center mt-8">
           <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-border-gray shadow-sm">
-            <span className="text-text-gray text-sm">Not ready yet?</span>
+            <span className="text-text-gray text-sm">Questions?</span>
             <a
               href="mailto:webers4@unlv.nevada.edu"
               className="inline-flex items-center gap-1 text-primary-scarlet hover:text-red-700 font-medium text-sm transition-colors"
@@ -37,79 +82,6 @@ function Register() {
               Email webers4@unlv.nevada.edu
             </a>
           </div>
-        </div>
-
-        {/* Form info */}
-        <div className="bg-white rounded-xl p-4 mb-6 border border-border-gray">
-          <p className="text-sm text-text-gray text-center mb-3">
-            This form will collect: team contact name &amp; email, team name, number of members (4-8),
-            all team member emails, how long you&apos;ve worked together, and scheduling preferences.
-          </p>
-          <p className="text-sm text-text-gray text-center">
-            For teams that do not meet eligibility criteria, all enrollment form information will be
-            destroyed within 30 days of the student researcher notifying the team of ineligibility.
-            For teams that proceed to study participation, contact information will be retained through
-            the completion of their participation and until the team receives their profile report.
-            After profile reports are delivered, all contact information will be destroyed.
-          </p>
-        </div>
-
-        {/* Open in new tab option */}
-        <div className="text-center mb-4">
-          <a
-            href={qualtricsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary-scarlet hover:text-red-700 font-medium text-sm transition-colors"
-          >
-            <ExternalLink className="w-4 h-4" />
-            Open survey in a new tab
-          </a>
-        </div>
-
-        {/* Qualtrics iframe container */}
-        <div className="relative bg-white rounded-2xl shadow-lg border border-border-gray overflow-hidden">
-          {/* Loading state */}
-          {isLoading && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10">
-              <Loader2 className="w-8 h-8 text-primary-scarlet animate-spin mb-4" />
-              <p className="text-text-gray">Loading registration form...</p>
-            </div>
-          )}
-
-          {/* Iframe */}
-          <iframe
-            src={qualtricsUrl}
-            title="Team Registration Form"
-            className="w-full border-0"
-            style={{ minHeight: '800px' }}
-            onLoad={handleIframeLoad}
-            allow="geolocation; microphone; camera"
-          />
-
-          {/* Placeholder overlay - remove when actual Qualtrics URL is added */}
-          {qualtricsUrl === 'about:blank' && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50">
-              <div className="text-center p-8">
-                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-gray-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-primary-charcoal mb-2">
-                  Registration Form Coming Soon
-                </h3>
-                <p className="text-text-gray mb-6 max-w-md">
-                  The Qualtrics registration form will be embedded here.
-                  For now, please email to express your interest.
-                </p>
-                <a
-                  href="mailto:webers4@unlv.nevada.edu?subject=Team%20Registration%20Interest"
-                  className="inline-block px-6 py-3 bg-primary-scarlet text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
-                >
-                  Email to Register
-                </a>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Bottom section */}

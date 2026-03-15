@@ -1,9 +1,9 @@
 import { Mail } from 'lucide-react'
 
 function Hero() {
-  const handleScrollToRegister = (e) => {
+  const handleScrollToSchedule = (e) => {
     e.preventDefault()
-    document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -22,10 +22,10 @@ function Hero() {
 
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4">
               <button
-                onClick={handleScrollToRegister}
+                onClick={handleScrollToSchedule}
                 className="w-full sm:w-auto px-8 py-4 bg-primary-scarlet text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
-                Register Your Team
+                Schedule Your Session
               </button>
             </div>
 
