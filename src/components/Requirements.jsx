@@ -10,7 +10,7 @@ const timelineSteps = [
     items: [
       'Individual online survey',
       'Assess teamwork competencies',
-      'Complete to unlock session scheduling',
+      'Complete before your scheduled session',
     ],
   },
   {
@@ -159,10 +159,10 @@ function EligibilityQuiz() {
               Your team meets all the requirements to participate in our study.
             </p>
             <a
-              href="#register"
+              href="#schedule"
               className="inline-block px-6 py-3 bg-primary-scarlet text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
             >
-              Register Your Team Now
+              Schedule Your Session
             </a>
           </>
         ) : (
