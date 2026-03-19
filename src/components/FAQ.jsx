@@ -24,7 +24,8 @@ const faqs = [
   },
   {
     question: 'Do I need permission from my company?',
-    answer: "If you're participating on company time with company resources, we need written permission on company letterhead before your session. Email it to webers4@unlv.nevada.edu ahead of your scheduled time.",
+    answer: "If you're participating on company time with company resources, we need written permission on company letterhead before your session. You can use our template to get started. This will be requested as part of registration after you schedule your session.",
+    link: { text: 'Permission Letter Template', url: 'https://docs.google.com/document/d/1GaanT2uS_fT-yNWljj5jCK4yOzsULf4bpCj7wQWn7mo/edit?usp=sharing' },
   },
   {
     question: 'Is this really free?',
@@ -44,7 +45,7 @@ const faqs = [
   },
 ]
 
-function FAQItem({ question, answer, isOpen, onToggle, id }) {
+function FAQItem({ question, answer, link, isOpen, onToggle, id }) {
   return (
     <div className="border-b border-border-gray last:border-b-0">
       <button
@@ -75,6 +76,19 @@ function FAQItem({ question, answer, isOpen, onToggle, id }) {
       >
         <div className="px-4 pb-5 text-text-gray leading-relaxed">
           {answer}
+          {link && (
+            <>
+              {' '}
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-scarlet hover:text-red-700 font-medium transition-colors underline"
+              >
+                {link.text}
+              </a>
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -137,6 +151,7 @@ function FAQ() {
                 id={index}
                 question={faq.question}
                 answer={faq.answer}
+                link={faq.link}
                 isOpen={openIndex === index}
                 onToggle={() => handleToggle(index)}
               />

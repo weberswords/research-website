@@ -7,7 +7,6 @@ const steps = [
     icon: CalendarClock,
     items: [
       'Pick a time that works for your team on Google Calendar',
-      'If participating on company time with company resources, provide permission on company letterhead ahead of time',
     ],
   },
   {

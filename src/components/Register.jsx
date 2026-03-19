@@ -1,4 +1,4 @@
-import { Mail, ArrowUp, Calendar, FileText } from 'lucide-react'
+import { Mail, ArrowUp, Calendar } from 'lucide-react'
 
 function Register() {
   const calendarUrl = 'https://calendar.app.google/Y5WFP8HF2rfN9Mfu7'
@@ -35,7 +35,7 @@ function Register() {
             </p>
           </div>
 
-          <div className="text-center mb-8">
+          <div className="text-center">
             <a
               href={calendarUrl}
               target="_blank"
@@ -45,28 +45,6 @@ function Register() {
               <Calendar className="w-5 h-5" />
               Schedule on Google Calendar
             </a>
-          </div>
-
-          {/* Company permission note */}
-          <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
-            <div className="flex items-start gap-3">
-              <FileText className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-              <div>
-                <h4 className="font-semibold text-amber-800 mb-1">
-                  Participating on company time?
-                </h4>
-                <p className="text-amber-700 text-sm">
-                  If you&apos;re participating on company time with company resources, we need permission
-                  on company letterhead ahead of your scheduled session. Please email it to{' '}
-                  <a
-                    href="mailto:webers4@unlv.nevada.edu"
-                    className="underline font-medium hover:text-amber-900"
-                  >
-                    webers4@unlv.nevada.edu
-                  </a>.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
