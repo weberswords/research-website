@@ -4,13 +4,13 @@ import { Check, X, ClipboardList, Users, FileCheck, ChevronRight, RotateCcw, Par
 const timelineSteps = [
   {
     number: 1,
-    title: 'Pre-Session',
-    duration: '15 minutes',
+    title: 'Pre-Session Survey',
+    duration: 'During session',
     icon: ClipboardList,
     items: [
       'Individual online survey',
       'Assess teamwork competencies',
-      'Complete before your scheduled session',
+      'Completed at the start of your scheduled session',
     ],
   },
   {
@@ -265,7 +265,7 @@ function Requirements() {
           </h2>
           <p className="text-text-gray text-lg">
             Total time commitment:{' '}
-            <span className="font-semibold text-primary-charcoal">~90 minutes</span>
+            <span className="font-semibold text-primary-charcoal">~60 minutes</span>
           </p>
         </div>
 

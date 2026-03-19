@@ -14,8 +14,8 @@ const steps = [
     title: 'Pre-Session Prep',
     icon: ClipboardCheck,
     items: [
-      'Consent form and pre-session survey sent to each team member',
-      'Complete the 15-minute survey before your scheduled session',
+      'Consent form sent to each team member ahead of time',
+      'Pre-session survey completed during your scheduled session',
     ],
   },
   {

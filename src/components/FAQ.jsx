@@ -4,7 +4,7 @@ import { Plus, Minus, Mail } from 'lucide-react'
 const faqs = [
   {
     question: 'How long will this take?',
-    answer: 'Approximately 90 minutes total: 15 minutes for the pre-survey, 60 minutes for the collaborative session, and 5 minutes for the post-survey.',
+    answer: 'Approximately 60 minutes total. The pre-survey, collaborative session, and post-survey all fit within a single 60-minute scheduled session.',
   },
   {
     question: 'Do we have to be in the same location?',
